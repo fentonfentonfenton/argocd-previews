@@ -12,7 +12,7 @@ spec:
     targetRevision: "*" # Retrieve latest but semantic versioning can be used see https://argoproj.github.io/argo-cd/user-guide/tracking_strategies/#helm
     repoURL: https://charts.bitnami.com/bitnami
     helm: # Change service port and service type so we can see it locally. # Hardcoded but will be changed by CI
-        parameters:
+      parameters:
       - name: service.nodePorts.http
         value: '30011'
       - name: service.type
