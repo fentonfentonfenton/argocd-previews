@@ -17,6 +17,8 @@ spec:
         value: '30012'
       - name: service.nodePorts.https
         value: '30013'
+      - name: service.type
+        value: NodePort'
       values: |
         image:
           tag: "1.19.1" 
