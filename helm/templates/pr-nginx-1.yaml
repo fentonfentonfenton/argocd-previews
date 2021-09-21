@@ -9,12 +9,14 @@ spec:
   project: previews
   source:
     chart: nginx
-    targetRevision: "*"
+    targetRevision: "*" # Retrieve latest but semantic versioning can be used see https://argoproj.github.io/argo-cd/user-guide/tracking_strategies/#helm
     repoURL: https://charts.bitnami.com/bitnami
     helm:
       values: |
         image:
-          tag: "1.21.2-debian-10-r0"
+          tag: "1.21.2-debian-10-r0" 
+        service.nodePorts.https: 30001
+        service.nodePorts.http: 3000
       version: v3
   destination:
     namespace: pr-nginx-1
