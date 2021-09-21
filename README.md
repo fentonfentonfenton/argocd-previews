@@ -1,10 +1,11 @@
-# Sample Code For Preview Environments With Argo CD
+# Sample Code For Preview Environments With Argo CD, from a Helm repository
 # Based heavily on
 * [Environments Based On Pull Requests (PRs): Using Argo CD To Apply GitOps Principles On Previews](https://youtu.be/cpAaI8p4R60)
 
 
 # Demo
 
+Retrieve the latest version of a chart from a chart repo and then deploy a slightly different version of it for fun.
 
 # Making this work
 
@@ -56,6 +57,10 @@ You can probably hit `localhost:30003` to see a _NEW_ nginx app, if not, then ma
 
 ---
 
-GitHub actions:
+### GitHub actions:
 
-The steps above (creating the extra) file and replacing the contents before pushing it to git can be done in `PLATFORM-103` in GitHub actions to `cutover-core`, there are tools like `kyml` to help, and probably better ways to do it..
+The steps above (creating the extra file and replacing the contents before pushing it to git) can be done in `PLATFORM-103` in GitHub actions to `cutover-core`, there are tools like `kyml` to help, and probably better ways to do it..
+
+We'd need to pass the `branch name` `commit` `PR id` and more in the `GitHub` action
+
+Then we'd want to remove the file when the `PR` is closed.
