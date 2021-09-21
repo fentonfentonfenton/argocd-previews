@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: pr-nginx-2
+  name: pr-nginx-2 # Hardcoded but will be changed by CI
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -11,18 +11,19 @@ spec:
     chart: nginx
     targetRevision: "*" # Retrieve latest but semantic versioning can be used see https://argoproj.github.io/argo-cd/user-guide/tracking_strategies/#helm
     repoURL: https://charts.bitnami.com/bitnami
-    helm:
-      parameters:
+    helm: # Change service port and service type so we can see it locally. # Hardcoded but will be changed by CI
+        parameters:
       - name: service.nodePorts.https
         value: '30011'
       - name: service.type
-        value: NodePort'
+        value: NodePort
+      # Hardcoded but will be changed by CI:
       values: |
         image:
-          tag: "1.19.1" 
+          tag: "1.10.0" 
       version: v3
   destination:
-    namespace: pr-nginx-2
+    namespace: pr-nginx-2 # Hardcoded but will be changed by CI
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
