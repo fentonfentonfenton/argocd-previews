@@ -64,3 +64,12 @@ The steps above (creating the extra file and replacing the contents before pushi
 We'd need to pass the `branch name` `commit` `PR id` and more in the `GitHub` action
 
 Then we'd want to remove the file when the `PR` is closed.
+
+---
+
+Other ways of doing it:
+
+https://github.com/marketplace/actions/copy-and-replace-tokens This could be triggered by another GitHub action in `core`
+https://github.com/marketplace/actions/trigger-external-workflow
+
+https://github.com/peter-evans/repository-dispatch
