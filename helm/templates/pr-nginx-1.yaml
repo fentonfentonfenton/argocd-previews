@@ -19,7 +19,7 @@ spec:
         value: '30001'
       - name: status.loadBalancer.ingress.ip
         value: 'localhost'
-      - name: spec.service.type
+      - name: service.type
         value: NodePort
       values: |
         image:
