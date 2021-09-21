@@ -13,12 +13,8 @@ spec:
     repoURL: https://charts.bitnami.com/bitnami
     helm:
         parameters:
-      - name: service.nodePorts.http
-        value: '30000'
       - name: service.nodePorts.https
-        value: '30001'
-      - name: status.loadBalancer.ingress.ip
-        value: 'localhost'
+        value: '30010'
       - name: service.type
         value: NodePort
       values: |
