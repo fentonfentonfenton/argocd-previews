@@ -43,7 +43,7 @@ You can probably hit `localhost:30001` to see an nginx app, if not, then make su
 You can run 
 ```
 cp helm/templates/pr-nginx-1.yaml helm/templates/pr-nginx-3.yaml
- gsed -i s/pr-nginx-1/pr-nginx-3/g  helm/templates/pr-nginx-3.yaml && gsed -i s/30001/30012/g  helm/templates/pr-nginx-3.yaml 
+gsed -i s/pr-nginx-1/pr-nginx-3/g  helm/templates/pr-nginx-3.yaml && gsed -i s/30001/30012/g  helm/templates/pr-nginx-3.yaml 
 git add helm/templates/pr-nginx-3.yaml
 git commit helm/templates/pr-nginx-3.yaml -m  'create something new'
 git push
