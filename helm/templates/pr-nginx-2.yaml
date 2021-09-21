@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pr-nginx-2
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: previews
+  source:
+    chart: nginx
+    targetRevision: "*" # Retrieve latest but semantic versioning can be used see https://argoproj.github.io/argo-cd/user-guide/tracking_strategies/#helm
+    repoURL: https://charts.bitnami.com/bitnami
+    helm:
+      parameters:
+      - name: service.nodePorts.http
+        value: '30010'
+      - name: service.nodePorts.https
+        value: '30011'
+      values: |
+        image:
+          tag: "1.19.1" 
+      version: v3
+  destination:
+    namespace: pr-nginx-2
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+    - CreateNamespace=true
