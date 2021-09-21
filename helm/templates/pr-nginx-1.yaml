@@ -21,6 +21,8 @@ spec:
         value: 'true'
       - name:  ingress.hostname
         value: 'localhost'
+      - name: service.loadBalancerIP
+        value: localhost
       values: |
         image:
           tag: "1.21.2-debian-10-r0" 
