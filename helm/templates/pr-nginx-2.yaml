@@ -14,9 +14,9 @@ spec:
     helm:
       parameters:
       - name: service.nodePorts.http
-        value: '30010'
+        value: '30012'
       - name: service.nodePorts.https
-        value: '30011'
+        value: '30013'
       values: |
         image:
           tag: "1.19.1" 
