@@ -13,10 +13,8 @@ spec:
     repoURL: https://charts.bitnami.com/bitnami
     helm:
       parameters:
-      - name: service.nodePorts.http
-        value: '30012'
       - name: service.nodePorts.https
-        value: '30013'
+        value: '30011'
       - name: service.type
         value: NodePort'
       values: |
