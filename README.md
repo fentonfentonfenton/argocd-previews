@@ -52,3 +52,10 @@ git push
 
 
 You can probably hit `localhost:30003` to see a _NEW_ nginx app, if not, then make sure `argocd` is synced.
+
+
+---
+
+GitHub actions:
+
+The steps above (creating the extra) file and replacing the contents before pushing it to git can be done in `PLATFORM-103` in GitHub actions to `cutover-core`, there are tools like `kyml` to help, and probably better ways to do it..
