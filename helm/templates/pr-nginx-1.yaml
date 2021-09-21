@@ -9,7 +9,7 @@ spec:
   project: previews
   source:
     chart: nginx
-    targetRevision: *
+    targetRevision: "*"
     repoURL: https://charts.bitnami.com/bitnami
     helm:
       values: |
