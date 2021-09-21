@@ -13,7 +13,7 @@ spec:
     repoURL: https://charts.bitnami.com/bitnami
     helm: # Change service port and service type so we can see it locally. # Hardcoded but will be changed by CI
         parameters:
-      - name: service.nodePorts.https
+      - name: service.nodePorts.http
         value: '30011'
       - name: service.type
         value: NodePort
