@@ -17,6 +17,10 @@ spec:
         value: '30010'
       - name: service.nodePorts.https
         value: '30011'
+      - name:  ingress.enabled
+        value: 'true'
+      - name:  ingress.hostname
+        value: 'localhost'
       values: |
         image:
           tag: "1.21.2-debian-10-r0" 
