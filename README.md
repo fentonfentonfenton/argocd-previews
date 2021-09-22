@@ -73,3 +73,10 @@ https://github.com/marketplace/actions/copy-and-replace-tokens This could be tri
 https://github.com/marketplace/actions/trigger-external-workflow
 
 https://github.com/peter-evans/repository-dispatch
+
+
+---
+
+Hack. 
+
+You can hack running it right now by making a pull request to master.
