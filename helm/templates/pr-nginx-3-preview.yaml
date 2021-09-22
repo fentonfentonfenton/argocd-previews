@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pr-nginx-3-preview
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: previews
+  source:
+    chart: nginx
+    repoURL: https://charts.bitnami.com/bitnami
+    helm:
+      values: |
+        image:
+          tag: "1.21.2-debian-10-r0"
+      version: v3
+  destination:
+    namespace: pr-nginx-3-preview
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+    - CreateNamespace=true
