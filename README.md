@@ -39,7 +39,7 @@ https://argoproj.github.io/argo-cd/operator-manual/cluster-bootstrapping/ This i
 
 Hardcoded in `helm/templates/pr-nginx-1.yaml` + 2 are some pre-hardcoded files that create `nginx` applications in `kubernetes`, they have slightly different things, so one is on `NodePort` `30010` and one on `30011`, and they run different `nginx` containers.
 
-You can probably hit `localhost:30001` to see an nginx app, if not, then make sure `argocd` is synced.
+You can probably hit `localhost:30010` to see an nginx app, if not, then make sure `argocd` is synced.
 
 You can run 
 ```
