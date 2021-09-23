@@ -59,7 +59,7 @@ You can probably hit `localhost:30012` to see a _NEW_ nginx app, if not, then ma
 
 ### GitHub actions:
 
-The steps above (creating the extra file and replacing the contents before pushing it to git) can be done in `PLATFORM-103` in GitHub actions to `cutover-core`, there are tools like `kyml` to help, and probably better ways to do it..
+The steps above (creating the extra file and replacing the contents before pushing it to git) can be done in GitHub actions to your application repo, there are tools like `kyml` to help, and probably better ways to do it..
 
 We'd need to pass the `branch name` `commit` `PR id` and more in the `GitHub` action
 
@@ -77,6 +77,6 @@ https://github.com/peter-evans/repository-dispatch
 
 ---
 
-Hack. 
+### Hack. 
 
 You can hack running it right now by making a pull request to master.
