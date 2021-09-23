@@ -52,7 +52,7 @@ git push
 
 
 
-You can probably hit `localhost:30003` to see a _NEW_ nginx app, if not, then make sure `argocd` is synced.
+You can probably hit `localhost:30012` to see a _NEW_ nginx app, if not, then make sure `argocd` is synced.
 
 
 ---
