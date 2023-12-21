@@ -22,8 +22,7 @@ jobs:
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: Create local changes
       run: |
-        touch jack.yml
-        cat preview.yaml | sed 's/nginx-1/nginx-${{ github.event.number }}-preview/g' > helm/templates/pr-nginx-${{ github.event.number }}-preview.yaml
+        cat preview.yaml | sed 's/nginx-1/nginx-${{ github.event.number }}-preview/g' | sed 's/30010/30${{ github.event.number }}00/g' > helm/templates/pr-nginx-${{ github.event.number }}-preview.yaml
     - name: Commit files
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
